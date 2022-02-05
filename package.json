@@ -45,5 +45,5 @@
     "start": "webpack serve --open --config webpack.config.dev-server.js"
   },
   "author": "Eduardo Rosendo<eduardojra96@gmail.com>",
-  "license": "MIT",
+  "license": "MIT"
 }
