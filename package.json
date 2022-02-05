@@ -1,5 +1,5 @@
 {
-  "name": "@ERosendo/qr-code-styling",
+  "name": "qr-code-styling",
   "version": "1.5.1",
   "description": "Add a style and an image to your QR code",
   "main": "lib/qr-code-styling.js",
@@ -44,30 +44,6 @@
     "test": "jest",
     "start": "webpack serve --open --config webpack.config.dev-server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kozakdenys/qr-code-styling.git"
-  },
-  "keywords": [
-    "qr",
-    "qrcode",
-    "qr-code",
-    "js",
-    "qrjs",
-    "qrstyling",
-    "styling",
-    "qrbranding",
-    "branding",
-    "qrimage",
-    "image",
-    "qrlogo",
-    "logo",
-    "design"
-  ],
-  "author": "Denys Kozak <kozak.denys.dev@gmail.com>",
+  "author": "Eduardo Rosendo<eduardojra96@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kozakdenys/qr-code-styling/issues"
-  },
-  "homepage": "https://qr-code-styling.com"
 }
