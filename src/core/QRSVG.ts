@@ -396,7 +396,6 @@ export default class QRSVG {
       if (ctx) {
         ctx.drawImage(this._image, 0, 0, this._canvas.width, this._canvas.height);
         this._imageUri = this._canvas.toDataURL("image/png");
-        console.log(this._imageUri);
       }
     }
   }
@@ -453,7 +452,7 @@ export default class QRSVG {
     const dh = height - options.imageOptions.margin * 2;
 
     const image = this._window.document.createElementNS("http://www.w3.org/2000/svg", "image");
-    image.setAttribute("href", this._imageUri || "");
+    image.setAttribute("xlink:href", this._imageUri || "");
     image.setAttribute("x", String(dx));
     image.setAttribute("y", String(dy));
     image.setAttribute("width", `${dw}px`);
