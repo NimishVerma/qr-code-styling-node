@@ -1,5 +1,5 @@
 {
-  "name": "qr-code-styling-node",
+  "name": "@erosendo/qr-code-styling-node",
   "version": "1.5.1",
   "description": "Add a style and an image to your QR code",
   "main": "lib/qr-code-styling.js",
@@ -41,8 +41,8 @@
     "test": "jest",
     "start": "webpack serve --open --config webpack.config.dev-server.js"
   },
-  "repository":{
-    "url":"https://github.com/ERosendo/qr-code-styling-node"
+  "repository": {
+    "url": "https://github.com/ERosendo/qr-code-styling-node"
   },
   "publishConfig": {
     "registry":"https://npm.pkg.github.com/"
