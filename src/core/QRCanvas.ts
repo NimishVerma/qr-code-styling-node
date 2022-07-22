@@ -1,11 +1,13 @@
 import calculateImageSize from "../tools/calculateImageSize";
 import errorCorrectionPercents from "../constants/errorCorrectionPercents";
-import QRDot from "../figures/dot/canvas/QRDot";
-import QRCornerSquare from "../figures/cornerSquare/canvas/QRCornerSquare";
-import QRCornerDot from "../figures/cornerDot/canvas/QRCornerDot";
-import { RequiredOptions } from "./QROptions";
+import QRDot from "./QRDot";
+import QRCornerSquare from "./QRCornerSquare";
+import QRCornerDot from "./QRCornerDot";
+import { RequiredOptions, Gradient } from "./QROptions";
 import gradientTypes from "../constants/gradientTypes";
-import { QRCode, Gradient, FilterFunction } from "../types";
+import { QRCode } from "../types";
+
+type FilterFunction = (i: number, j: number) => boolean;
 
 const squareMask = [
   [1, 1, 1, 1, 1, 1, 1],
@@ -188,8 +190,8 @@ export default class QRCanvas {
           continue;
         }
         dot.draw(
-          yBeginning + j * dotSize,
           xBeginning + i * dotSize,
+          yBeginning + j * dotSize,
           dotSize,
           (xOffset: number, yOffset: number): boolean => {
             if (i + xOffset < 0 || j + yOffset < 0 || i + xOffset >= count || j + yOffset >= count) return false;
@@ -273,8 +275,8 @@ export default class QRCanvas {
             }
 
             dot.draw(
-              x + i * dotSize,
               y + j * dotSize,
+              x + i * dotSize,
               dotSize,
               (xOffset: number, yOffset: number): boolean => !!squareMask[i + xOffset]?.[j + yOffset]
             );
